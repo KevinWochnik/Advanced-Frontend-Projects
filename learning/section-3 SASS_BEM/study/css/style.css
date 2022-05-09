@@ -1,0 +1,50 @@
+div.first {
+  color: #ff9999;
+  font-size: 20px;
+  background-color: #b3ffb3;
+}
+
+div.new {
+  background-color: black;
+}
+
+@media (min-width: 460px) {
+  div.new {
+    height: 30px;
+    width: 30px;
+    background-color: red;
+  }
+}
+
+@media (min-width: 640px) {
+  div.new {
+    height: 40px;
+    width: 40px;
+    background-color: blue;
+  }
+}
+
+@media (min-width: 1024px) {
+  div.new {
+    height: 60px;
+    width: 60px;
+    background-color: green;
+  }
+}
+
+@media (min-width: 1200px) {
+  div.new {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 1440px) {
+  div.new {
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+  }
+}
+/*# sourceMappingURL=style.css.map */

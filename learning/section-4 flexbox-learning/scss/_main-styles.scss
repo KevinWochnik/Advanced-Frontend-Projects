@@ -1,0 +1,32 @@
+html {
+  font-size: 10px;
+  background-color: $main-color;
+  font-family: $default-font;
+  color: map-get($colors, white);
+}
+.wrapper {
+  font-size: 2rem;
+  background-color: map-get($colors, white);
+  box-shadow: 0 0 4px 0 map-get($colors, black);
+}
+.logo {
+  background-color: map-get($colors, lightBlue);
+}
+.search {
+  background-color: map-get($colors, blue);
+}
+.settings {
+  background-color: map-get($colors, red);
+}
+.menu {
+  background-color: map-get($colors, darkBlue);
+}
+.main-articles{
+    background-color: map-get($colors, darkGreen);
+}
+.article-list{
+    background-color: map-get($colors, darkYellow);
+}
+.footer{
+    background-color: map-get($colors, darkBlue);
+}

@@ -1,0 +1,39 @@
+@import "mediaQuerys";
+@function lightenBy2($color, $size) {
+  @return lighten($color, $size * 2);
+}
+
+div.first {
+  color: lightenBy2(red, 15%);
+  font-size: 20px;
+  background-color: lightenBy2(green, 30%);
+}
+
+div.new {
+    background-color: black;
+    @include mq(xsmall){
+        height: 30px;
+        width: 30px;
+        background-color: red;
+    };
+    @include mq(small){
+        height: 40px;
+        width: 40px;
+        background-color: blue;
+    };
+    @include mq(large){
+        height: 60px;
+        width: 60px;
+        background-color: green;
+    };
+    @include mq(xlarge){
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+    }
+    @include mq(xxlarge){
+        height: 200px;
+        width: 200px;
+        background-color: orange;
+    }
+}

@@ -1,0 +1,17 @@
+$main-color: #8daae5;
+$default-font: "arial", "sans-serif";
+$special-font: "pt sans", "roboto", "arial", "sans-serif";
+$colors: (
+  white: #eee,
+  black: #111,
+  lightBlue: cadetblue,
+  blue: royalblue,
+  darkBlue: rgb(50, 50, 230),
+  red: rgb(230, 10, 10),
+  darkGreen: #006400,
+  lightGreen: lighten(#006400, 50%),
+  darkYellow: #ac7d0c,
+  grey: #666,
+  darkGrey: #333,
+  transparent: rgba(0, 0, 0, 0.2),
+);

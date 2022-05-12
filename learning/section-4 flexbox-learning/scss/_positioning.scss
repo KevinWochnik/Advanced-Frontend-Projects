@@ -1,31 +1,145 @@
 .wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: flex-start;
   max-width: 1000px;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
 }
 .logo {
   flex-basis: 200px;
-  height: 160px;
-  flex-grow: 1;
+  &__image {
+    display: block;
+    width: 100%;
+  }
 }
 .search {
   flex-grow: 1;
+  // kontener flexbox
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq(xsmall) {
+    flex-basis: 100%;
+    order: -1;
+  }
+  &__input {
+    flex-basis: 60%;
+    height: 50%;
+    max-height: 60px;
+    margin-right: 10px;
+    padding: 0 10px;
+  }
+  &__btn {
+    min-height: 50px;
+    height: 50%;
+    padding: 0 10px;
+  }
 }
 .settings {
-  padding: 0 50px;
+  display: flex;
+  padding: 0 30px 0 50px;
+  align-items: center;
+  @include mq(xsmall) {
+    flex-grow: 1;
+    justify-content: end;
+  }
+  &__icon-link {
+    margin: 0 10px;
+    font-size: 3rem;
+  }
 }
 .menu {
   flex-basis: 100%;
+  height: 70px;
+  margin-top: 10px;
+  padding: 15px 50px 15px 80px;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin: 0 20px;
+    &:nth-last-child(1) {
+      .menu__link {
+        padding: 0 22px;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    padding: 0 10px;
+    text-align: start;
+    justify-content: center;
+  }
+}
+.article {
+  padding: 30px 50px;
+  &__image {
+    display: block;
+    width: 100%;
+  }
+  &__title {
+    padding: 15px 0;
+    .article--small & {
+      padding: 25px 0 10px;
+    }
+  }
+  &__description {
+    padding-bottom: 10px;
+  }
+  &__btn {
+    display: block;
+    padding: 5px;
+    width: 50%;
+    margin: 10px auto;
+  }
+  &--small {
+    padding: 20px 30px;
+  }
 }
 .main-articles {
   flex-basis: 100%;
-  min-height: 50vh;
-}
-.article-list{
+  display: flex;
+  flex-wrap: wrap;
+  &__intro {
     flex-basis: 100%;
+    padding: 10px 0;
+    margin: 60px 0 30px;
+  }
+  .article {
+    flex-basis: 50%;
+    @include mq(xsmall) {
+      flex-basis: 100%;
+    }
+  }
 }
-.footer{
-    flex-basis: 100%;
+.article-list {
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  & .article {
+    flex-basis: 33%;
+    @include mq(small) {
+      flex-basis: 45%;
+    }
+    @include mq(xsmall) {
+      flex-basis: 95%;
+    }
+  }
+}
+.footer {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  perspective: 20px 0;
+  .sm-links {
+    flex-basis: 30%;
+    padding: 20px;
+  }
+}
+.sm-links {
+  &__title {
+    margin: 20px 0 40px;
+  }
 }

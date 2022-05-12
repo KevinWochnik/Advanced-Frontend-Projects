@@ -13,20 +13,119 @@ html {
   background-color: map-get($colors, lightBlue);
 }
 .search {
-  background-color: map-get($colors, blue);
+  &__input {
+    font-size: 1.4rem;
+    &:focus {
+      box-shadow: 0 0 2px 1px map-get($colors, lightBlue);
+      font-weight: bold;
+    }
+  }
+  &__btn {
+    font-size: 1.4rem;
+    border: 2px solid map-get($colors, black);
+    background-color: map-get($colors, white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      background-color: map-get($colors, black);
+      color: map-get($colors, white);
+    }
+  }
 }
 .settings {
-  background-color: map-get($colors, red);
+  color: map-get($colors, grey);
+  &:hover {
+    color: map-get($colors, black);
+  }
 }
 .menu {
-  background-color: map-get($colors, darkBlue);
+  background-color: map-get($colors, black);
+  font-family: $special-font;
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 4rem;
+    &:hover {
+      border-bottom: 2px solid map-get($colors, darkYellow);
+    }
+    &:nth-last-child(1) {
+      margin-left: auto;
+      border: 2px solid map-get($colors, white);
+      &:hover {
+        border-color: map-get($colors, darkYellow);
+      }
+    }
+  }
+  &__link {
+    color: map-get($colors, white);
+    text-decoration: none;
+  }
 }
-.main-articles{
-    background-color: map-get($colors, darkGreen);
+.article {
+  color: map-get($colors, white);
+  text-align: center;
+  &__image {
+    border: 2px solid map-get($colors, white);
+    border-radius: 5px;
+    box-shadow: 0 0 4px white;
+  }
+  &__title {
+    font-family: $special-font;
+    text-transform: uppercase;
+    font-size: 3rem;
+    .article--small & {
+      font-size: 1.8rem;
+      background-color: $main-color;
+    }
+  }
+  &__btn {
+    font-size: 1.8rem;
+    font-style: italic;
+    text-decoration: none;
+    border: 2px solid map-get($colors, white);
+    color: map-get($colors, white);
+    background-color: lighten(map-get($colors, darkGreen), 5%);
+  }
+  &--small {
+    color: map-get($colors, black);
+  }
 }
-.article-list{
-    background-color: map-get($colors, darkYellow);
+.main-articles {
+  background-color: map-get($colors, darkGreen);
+  &__intro {
+    background-color: map-get($colors, transparent);
+    text-align: center;
+    font-size: 4.4rem;
+    letter-spacing: 2px;
+  }
+  .article {
+    &__introduction {
+      text-align: justify;
+      line-height: 1.6;
+      font-size: 1.6rem;
+    }
+  }
 }
-.footer{
-    background-color: map-get($colors, darkBlue);
+.footer {
+  background-color: $main-color;
+}
+.sm-links {
+  font-family: $special-font;
+  &--dark{
+    background-color: darken($main-color, 25%);
+  }
+  &__title {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  &__item {
+    text-indent: 40px;
+    font-size: 1.8rem;
+  }
 }

@@ -1,0 +1,22 @@
+.scroller__navigation {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  & ul{
+      list-style: none;
+      & li{
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: blue;
+          cursor: pointer;
+          &.active{
+              background-color: green;
+          }
+      }
+      & :not(li:first-of-type) {
+          margin-top: 7px;
+      }
+  }
+}

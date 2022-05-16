@@ -18,4 +18,32 @@ html {
   max-width: 75%;
   margin: 16px auto;
 }
+
+.scroller__navigation {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.scroller__navigation ul {
+  list-style: none;
+}
+
+.scroller__navigation ul li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.scroller__navigation ul li.active {
+  background-color: green;
+}
+
+.scroller__navigation ul :not(li:first-of-type) {
+  margin-top: 7px;
+}
 /*# sourceMappingURL=style.css.map */
